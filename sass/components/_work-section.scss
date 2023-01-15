@@ -1,0 +1,40 @@
+// work section
+.work-section {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+.work {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+
+    &__thumb {
+        position: relative;
+    }
+    &__subtitle {
+        position: absolute;
+        bottom:0;
+        margin: 0;
+        min-width: 370px;
+        max-height: 70px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $white;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}
+.work-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-textColor;
+}

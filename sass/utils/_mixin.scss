@@ -1,0 +1,11 @@
+@mixin btn-hocus () {
+    &:hover,
+    &:focus {
+       background-color: $hero-buttonFokus;
+        }
+    }
+
+    @mixin transform () {
+        transition-duration: 250ms;
+        transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
+    }

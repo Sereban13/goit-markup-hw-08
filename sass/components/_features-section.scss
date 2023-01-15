@@ -1,0 +1,113 @@
+// features section
+.features-set {
+    padding-bottom: 0;
+}
+
+.features {
+    @extend %list;
+
+    &__item {
+        max-width: 450px;
+        margin-bottom: 30px;
+       
+        &:last-child {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 0;   
+            }   
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 1 * 30px) / 2); 
+            &:nth-child(2n+1) {
+                margin-right: 30px;
+            }      
+            &:nth-child(2n) {
+                @media screen and (max-width: 1199px){
+                    margin-right: 0;   
+                } 
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 4 * 30px) / 4); 
+            
+            &:not(:last-child) {
+                margin-right: 30px;   
+            }   
+        }
+    }
+
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 10px;
+        // margin-right: auto;
+        // margin-left: auto;
+        margin-bottom: 30px;
+        background-color: $secondaryBackground; 
+    }
+    
+    &__title {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $title-textColor;
+    }
+    &__description {
+        // max-width: 270px;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap; 
+        margin-bottom: 60px;
+    }
+   
+}
+
+
+
+// @media screen and (min-width: 481px) and (max-width: 768px) {
+//     .features {
+//         display: flex;
+//     }
+// }
+// .features {
+//     @extend %list;
+//     display: flex;
+//     justify-content: space-between;
+
+//     &__icon {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 25px 10px;
+//         margin-right: auto;
+//         margin-left: auto;
+//         margin-bottom: 30px;
+//         background-color: $secondaryBackground; 
+//     }
+//     &__title {
+//         margin-bottom: 10px;
+//         font-size: 14px;
+//         line-height: 16px;
+//         letter-spacing: 0.03em;
+//         text-transform: uppercase;
+//         color: $title-textColor;
+//     }
+//     &__description {
+//         max-width: 270px;
+//         margin-bottom: 0;
+//         font-size: 14px;
+//         line-height: 1.71;
+//         letter-spacing: 0.03em;
+//     }
+// }   

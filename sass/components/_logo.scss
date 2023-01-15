@@ -1,0 +1,36 @@
+// logo
+.logo {
+    @extend %link;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $title-textColor;
+
+    &__part {
+        color: $accentColor;
+    }
+}
+// logo-header
+.header__logo {
+
+    @media screen and (max-width: 767px) {
+        margin: 16px 0px;   
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;   
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;   
+    }
+    
+}
+
+// logo footer
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    color: $white;
+}

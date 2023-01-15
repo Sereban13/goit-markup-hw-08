@@ -1,0 +1,108 @@
+// portfolio projects
+.portfolio {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-item {
+    max-width: 370px;
+    height: 404px;
+    background: $white;
+
+    border-bottom: 1px solid $portfolio-projectBorder;
+
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &__foto {
+        margin-bottom: 20px;
+    }
+    &__name {
+        padding-left: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $title-textColor;
+        margin-bottom: 4px;
+    }
+    &__type {
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        color: $primary-textColor;
+    }
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+
+        // animation
+    &__thumb {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color:$accentColor;
+        transform: translateY(101%);
+        
+        transition-property: transform;
+        @include transform ();
+        // transition-duration: 250ms;
+        // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__overlay {
+        color: $white;
+        padding: 63px 24px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.555;
+        letter-spacing: 0.03em;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        border: 1px solid transparent;
+    
+        transition: border;
+        @include transform ();
+    
+        &:hover,
+        &:focus{
+        border: 1px solid #EEEEEE;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    
+        &:hover .project-item__overlay {
+            transform: translateY(0); 
+         }
+    }
+}
+
+
+
+
+
+
+
+
+
