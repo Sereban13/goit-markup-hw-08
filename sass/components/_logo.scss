@@ -3,27 +3,31 @@
     @extend %link;
     font-family: 'Raleway';
     font-style: normal;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: $title-textColor;
 
     &__part {
         color: $accentColor;
     }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 // logo-header
 .header__logo {
-
-    @media screen and (max-width: 767px) {
-        margin: 16px 0px;   
-    }
-
+    
+    padding: 16px 0px;   
+    
     @media screen and (min-width: 768px) {
         margin-right: 88px;   
     }
     @media screen and (min-width: 1200px) {
-        margin-right: 93px;   
+        margin-right: 93px; 
+        padding: 24px 0px 25px 0px;  
     }
     
 }
@@ -31,6 +35,17 @@
 // logo footer
 .footer__logo {
     display: block;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     color: $white;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 28px;
+
+    // @media screen and (max-width: 767px) {
+    //     text-align: center;
+    //     padding-top: 60px;
+    //     margin-bottom: 28px;
+    // }
+
+    
 }

@@ -14,14 +14,23 @@
 
 .team {
     @extend %list;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    @media screen and (min-width: 478px) {
+        display: flex; 
+        flex-wrap: wrap;
+     }
+     
+     @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+     }
+    
 }
 
 .team-member {
     @extend %list;
-    max-width: 270px;
+
     height: auto;
     background: $white;
 /* material shadow v1 */
@@ -30,7 +39,26 @@
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &__foto{
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 480px) {
+       width: 450px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 1 * 30px) / 2);
+        &:nth-child(2n-1) {
+            margin-right: 30px;
+        }
+     }
+
+     @media screen and (min-width: 1200px) {
+        max-width: 270px;
+     }
+
+    &__foto {
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
     }
     &__name {

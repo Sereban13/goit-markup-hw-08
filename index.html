@@ -19,9 +19,15 @@
     <header class="header-section">
       <div class="container header">
         <a href="./index.html" class="logo header__logo"><span class="logo__part">Web</span>Studio</a>
-        <button type="button" class="button-burger" data-modal-open>
-          <svg class="burger-icon" width="24" height="16">
-            <use href="./images/icons.svg#icon-burger"></use>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-label="Перемикач мобільного меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger-icon" width="40" height="40">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
         <nav class="nav-site">
@@ -53,45 +59,60 @@
         </ul>
       </div>
 
-      <!-- <div class="backdrop-mobile is-hidden" data-modal>
-        <div class="modal-mobile">
-          <button type="button" class="button__close--mobile" data-modal-close>
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-          </button>
-
-          <nav>
-            <ul class="nav-modal">
-              <li class="nav-modal__item">
-                <a href="./index.html" class="nav-modal__link current">Студія</a>
-              </li>
-              <li class="nav-modal__item">
-                <a href="./portgolio.html" class="nav-modal__link">Портфоліо</a>
-              </li>
-              <li class="nav-modal__item"><a href="#" class="nav-modal__link">Контакти</a></li>
-            </ul>
-          </nav>
-          <ul class="contacts-modal">
-            <li class="contacts-modal__item">
-              <a href="tel:+380961111111" class="contacts-modal__link">+38 096 111 11 11</a>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle js-close-menu">
+          <svg class="burger-icon" width="40" height="40">
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu">
+          <ul class="nav-mobile">
+            <li class="nav-mobile__item">
+              <a href="./index.html" class="nav-mobile__link">Студія</a>
             </li>
-            <li class="contacts-modal__item">
-              <a href="mailto:info@devstudio.com" class="contacts-modal__link">info@devstudio.com</a>
+            <li class="nav-mobile__item">
+              <a href="./portgolio.html" class="nav-mobile__link">Портфоліо</a>
+            </li>
+            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Контакти</a></li>
+          </ul>
+
+          <ul class="contacts-mobile">
+            <li class="contacts-mobile__item">
+              <a href="tel:+380961111111" class="contacts-mobile__link contacts-mobile__link--phone"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="contacts-mobile__item">
+              <a href="mailto:info@devstudio.com" class="contacts-mobile__link contacts-mobile__link--mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="socials-mobile">
+            <li class="socials-mobile__item">
+              <a href="#" class="socials-mobile__link">Instagram</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="#" class="socials-mobile__link">Twitter</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="#" class="socials-mobile__link">Facebook</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="#" class="socials-mobile__link">LinkedIn</a>
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
     </header>
-    -->
 
     <main>
-      <!-- <section class="hero overlay">
+      <section class="hero overlay">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
 
       <section class="section features-set">
         <div class="container">
@@ -158,15 +179,33 @@
           <div>
             <ul class="work">
               <li class="work__thumb">
-                <img src="./images/box1.jpg" alt="написання коду" width="370" height="294" />
+                <img
+                  srcset="./images/box1.jpg 1x, ./images/box1@2x.jpg 2x"
+                  src="./images/box1.jpg"
+                  alt="написання коду"
+                  width="370"
+                  height="294"
+                />
                 <h3 class="work__subtitle">Десктопні додатки</h3>
               </li>
               <li class="work__thumb">
-                <img src="./images/box2.jpg" alt="створення макетів" width="370" height="294" />
+                <img
+                  srcset="./images/box2.jpg 1x, ./images/box2@2x.jpg 2x"
+                  src="./images/box2.jpg"
+                  alt="створення макетів"
+                  width="370"
+                  height="294"
+                />
                 <h3 class="work__subtitle">Мобільні додатки</h3>
               </li>
               <li class="work__thumb">
-                <img src="./images/box3.jpg" alt="підбір кольорів" width="370" height="294" />
+                <img
+                  srcset="./images/box3.jpg 1x, ./images/box3@2x.jpg 2x"
+                  src="./images/box3.jpg"
+                  alt="підбір кольорів"
+                  width="370"
+                  height="294"
+                />
                 <h3 class="work__subtitle">Дизайнерські рішення</h3>
               </li>
             </ul>
@@ -174,12 +213,27 @@
         </div>
       </section>
 
-      <!-- <section class="section team-section">
+      <section class="section team-section">
         <div class="container">
           <h2 class="team-section__title">Наша команда</h2>
           <ul class="team">
             <li class="team-member">
-              <img src="./images/foto1.jpg" alt="foto1" width="270" height="260" class="team-member__foto" />
+              <picture>
+                <source
+                  srcset="./images/tmember1-1200.jpg 1x, ./images/tmember1-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tmember1-768.jpg 1x, ./images/tmember1-768@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/tmember1-480.jpg "
+                  alt="foto1"
+                  class="team-member__foto"
+                  srcset="./images/tmember1-480.jpg 1x, ./images/tmember1-480@2x.jpg 2x"
+                />
+              </picture>
 
               <h3 class="team-member__name">Ігор Дем'яненко</h3>
               <p class="team-member__position">Product Designer</p>
@@ -215,7 +269,22 @@
               </ul>
             </li>
             <li class="team-member">
-              <img src="./images/foto2.jpg" alt="foto1" width="270" height="260" class="team-member__foto" />
+              <picture>
+                <source
+                  srcset="./images/tmember2-1200.jpg 1x, ./images/tmember2-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tmember2-768.jpg 1x, ./images/tmember2-768@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/tmember2-480.jpg "
+                  alt="foto1"
+                  class="team-member__foto"
+                  srcset="./images/tmember2-480.jpg 1x, ./images/tmember2-480@2x.jpg 2x"
+                />
+              </picture>
               <h3 class="team-member__name">Ольга Рєпіна</h3>
               <p class="team-member__position">Frontend Developer</p>
 
@@ -251,7 +320,22 @@
               </ul>
             </li>
             <li class="team-member">
-              <img src="./images/foto3.jpg" alt="foto3" width="270" height="260" class="team-member__foto" />
+              <picture>
+                <source
+                  srcset="./images/tmember3-1200.jpg 1x, ./images/tmember3-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tmember3-768.jpg 1x, ./images/tmember3-768@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/tmember3-480.jpg "
+                  alt="foto1"
+                  class="team-member__foto"
+                  srcset="./images/tmember3-480.jpg 1x, ./images/tmember3-480@2x.jpg 2x"
+                />
+              </picture>
 
               <h3 class="team-member__name">Микола Тарасов</h3>
               <p class="team-member__position">Marketing</p>
@@ -288,7 +372,22 @@
               </ul>
             </li>
             <li class="team-member">
-              <img src="./images/foto4.jpg" alt="foto4" width="270" height="260" class="team-member__foto" />
+              <picture>
+                <source
+                  srcset="./images/tmember4-1200.jpg 1x, ./images/tmember4-1200@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tmember4-768.jpg 1x, ./images/tmember4-768@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/tmember4-480.jpg "
+                  alt="foto1"
+                  class="team-member__foto"
+                  srcset="./images/tmember4-480.jpg 1x, ./images/tmember4-480@2x.jpg 2x"
+                />
+              </picture>
 
               <h3 class="team-member__name">Михайло Єрмаков</h3>
               <p class="team-member__position">UI Designer</p>
@@ -326,7 +425,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <section class="section">
         <div class="container clients">
@@ -379,7 +478,7 @@
       </section>
     </main>
 
-    <!-- <footer class="footer-section">
+    <footer class="footer-section">
       <div class="footer container">
         <div class="adress">
           <a href="./index.html" class="logo footer__logo link"><span class="logo__part">Web</span>Studio</a>
@@ -438,6 +537,7 @@
           <h2 class="footer__title">Підпишіться на розсилку</h2>
           <form class="footer-form__section" name="email-form" autocomplete="on" novalidate>
             <input class="footer-form__input" name="email" type="email" placeholder="Email" />
+
             <div class="footer-form__submit">
               <button class="footer-form__submit-btn button" type="submit">Підписатися</button>
               <svg class="footer-form__svg" width="24" height="24">
@@ -447,9 +547,9 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="button-close" data-modal-close>
           <svg width="18" height="18">
@@ -510,9 +610,15 @@
         </form>
       </div>
     </div>
-    -->
 
     <script src="./js/modal.js"></script>
-    -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
