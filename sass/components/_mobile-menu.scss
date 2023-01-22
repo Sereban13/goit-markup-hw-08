@@ -45,10 +45,14 @@
   right: 15px;
   // color: #fff;
 }
+
+.mobile-menu {
+  
+}
 // nav-mobile
 .nav-mobile {
     @extend %list;
-    margin-bottom: 306px;
+    margin-bottom: auto;
 
     &__item {
         position: relative;

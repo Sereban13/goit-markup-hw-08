@@ -146,7 +146,7 @@ body {
 }
 
 .nav-mobile {
-  margin-bottom: 306px;
+  margin-bottom: auto;
 }
 .nav-mobile__item {
   position: relative;
